@@ -1,0 +1,10 @@
+h1= tour
+h2= user.toUpperCase()
+//- h1 The Park Camper
+
+- const x = 9;
+h2= 2 * x
+
+
+
+p This is just some paragraph
