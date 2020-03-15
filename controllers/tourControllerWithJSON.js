@@ -39,7 +39,7 @@ app.post("/", (req, res) => {
 */
 
 exports.getAllTours = (req, res) => {
-    console.log(req.requestTime);
+    // console.log(req.requestTime);
 
     res.status(200).json({
         status: "success",
@@ -53,7 +53,7 @@ exports.getAllTours = (req, res) => {
 };
 
 exports.getTour = (req, res) => {
-    console.log(req.params);
+    // console.log(req.params);
 
     const id = req.params.id * 1;
     const tour = toursJSON.find(el => el.id === id);

@@ -8430,19 +8430,18 @@ function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log(email, password);
-            _context.prev = 1;
-            _context.next = 4;
+            _context.prev = 0;
+            _context.next = 3;
             return (0, _axios.default)({
               method: "POST",
-              url: "http://localhost:3000/api/v1/users/login",
+              url: "/api/v1/users/login",
               data: {
                 email: email,
                 password: password
               }
             });
 
-          case 4:
+          case 3:
             res = _context.sent;
 
             if (res.data.status === "success") {
@@ -8452,20 +8451,20 @@ function () {
               }, 1000);
             }
 
-            _context.next = 11;
+            _context.next = 10;
             break;
 
-          case 8:
-            _context.prev = 8;
-            _context.t0 = _context["catch"](1);
+          case 7:
+            _context.prev = 7;
+            _context.t0 = _context["catch"](0);
             (0, _alerts.showAlert)("error", _context.t0.response.data.message);
 
-          case 11:
+          case 10:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[1, 8]]);
+    }, _callee, null, [[0, 7]]);
   }));
 
   return function login(_x, _x2) {
@@ -8490,7 +8489,7 @@ function () {
             _context2.next = 3;
             return (0, _axios.default)({
               method: "GET",
-              url: "http://localhost:3000/api/v1/users/logout"
+              url: "/api/v1/users/logout"
             });
 
           case 3:
@@ -8549,7 +8548,7 @@ function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            url = type === "Password" ? "http://localhost:3000/api/v1/users/updatePassword" : "http://localhost:3000/api/v1/users/updateMe";
+            url = type === "Password" ? "/api/v1/users/updatePassword" : "/api/v1/users/updateMe";
             _context.next = 4;
             return (0, _axios.default)({
               method: "PATCH",
@@ -8619,7 +8618,7 @@ function () {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return (0, _axios.default)("http://localhost:3000/api/v1/booking/checkout-session/".concat(tourId));
+            return (0, _axios.default)("/api/v1/booking/checkout-session/".concat(tourId));
 
           case 3:
             session = _context.sent;
@@ -9036,7 +9035,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50739" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61330" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
